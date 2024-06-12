@@ -104,6 +104,7 @@ class HomeScreenState extends State<HomeScreen> {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
+        padding: EdgeInsets.only(bottom: Dimensions.iconSize16),
         width: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -205,6 +206,24 @@ class HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
+            Expanded(child: SizedBox()),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Developed By",
+                  style: TextStyle(
+                    fontSize: 13,
+                    color: Colors.brown.shade800,
+                  ),
+                ),
+                SizedBox(width: 4),
+                Text(
+                  "Shinas Koya",
+                  style: TextStyle(fontSize: 14, color: Colors.brown.shade800, fontWeight: FontWeight.bold),
+                ),
+              ],
+            )
           ],
         ),
       ),
