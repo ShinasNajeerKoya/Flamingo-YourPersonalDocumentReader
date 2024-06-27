@@ -1,7 +1,7 @@
 import 'package:file_picker/file_picker.dart';
 import 'package:flemingo_pdfreader/constants/error_enum.dart';
+import 'package:flemingo_pdfreader/constants/size_configuration.dart';
 import 'package:flemingo_pdfreader/screens/pdf_screen.dart';
-import 'package:flemingo_pdfreader/utils/dimensions.dart';
 import 'package:flemingo_pdfreader/widgets/error_screen.dart';
 import 'package:flemingo_pdfreader/widgets/file_opener_button.dart';
 import 'package:flutter/material.dart';
@@ -101,10 +101,10 @@ class HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    SizeConfig().init(context);
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.only(bottom: Dimensions.iconSize16),
+        padding: EdgeInsets.only(bottom: SizeConfig.getProportionateScreenHeight(16)),
         width: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -119,9 +119,9 @@ class HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 100),
+            SizedBox(height: SizeConfig.getProportionateScreenHeight(100)),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
+              padding: EdgeInsets.symmetric(horizontal: SizeConfig.getProportionateScreenWidth(24)),
               child: RichText(
                 text: TextSpan(
                   style: GoogleFonts.poppins(
@@ -142,9 +142,15 @@ class HomeScreenState extends State<HomeScreen> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
-              height: Dimensions.imageHeight400,
-              margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+              padding: EdgeInsets.symmetric(
+                horizontal: SizeConfig.getProportionateScreenWidth(5),
+                vertical: SizeConfig.getProportionateScreenHeight(10),
+              ),
+              height: SizeConfig.getProportionateScreenHeight(400),
+              margin: EdgeInsets.symmetric(
+                horizontal: SizeConfig.getProportionateScreenWidth(20),
+                vertical: SizeConfig.getProportionateScreenHeight(40),
+              ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
                 color: Colors.white,
@@ -182,13 +188,12 @@ class HomeScreenState extends State<HomeScreen> {
               ),
             ),
             Container(
-              width: size.width,
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              width: double.infinity,
+              padding: EdgeInsets.symmetric(horizontal: SizeConfig.getProportionateScreenWidth(20)),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   FileOpenerButton(
-                    size: size,
                     image: "assets/images/doc.png",
                     title: "Open Word File",
                     onPressed: () async {
@@ -196,7 +201,6 @@ class HomeScreenState extends State<HomeScreen> {
                     },
                   ),
                   FileOpenerButton(
-                    size: size,
                     image: "assets/images/pdf.png",
                     title: "Open PDF File",
                     onPressed: () async {
@@ -230,3 +234,5 @@ class HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
+

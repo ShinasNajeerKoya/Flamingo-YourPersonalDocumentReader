@@ -1,8 +1,8 @@
+import 'package:flemingo_pdfreader/constants/size_configuration.dart';
 import 'package:flemingo_pdfreader/utils/dimensions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pdfx/pdfx.dart';
-
 
 class PDFscreen extends StatefulWidget {
   final String? path;
@@ -88,14 +88,10 @@ class _PDFscreenState extends State<PDFscreen> {
         ],
       ),
       body: Container(
-        height: MediaQuery
-            .of(context)
-            .size
-            .height,
-        width: MediaQuery
-            .of(context)
-            .size
-            .width,
+        height: SizeConfig.screenHeight,
+        // Use SizeConfig for dynamic height
+        width: SizeConfig.screenWidth,
+        // Use SizeConfig for dynamic width
         padding: const EdgeInsets.only(top: 20),
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -109,23 +105,23 @@ class _PDFscreenState extends State<PDFscreen> {
         ),
         child: _error != null
             ? Center(
-          child: Text(
-            _error!,
-            style: TextStyle(color: Colors.red, fontSize: Dimensions.font20),
-          ),
-        )
-            : Column(
-          children: [
-            Expanded(
-              child: Center(
-                child: PdfViewPinch(
-                  controller: pdfController,
-                  scrollDirection: Axis.vertical,
+                child: Text(
+                  _error!,
+                  style: TextStyle(color: Colors.red, fontSize: Dimensions.font20),
                 ),
+              )
+            : Column(
+                children: [
+                  Expanded(
+                    child: Center(
+                      child: PdfViewPinch(
+                        controller: pdfController,
+                        scrollDirection: Axis.vertical,
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            ),
-          ],
-        ),
       ),
     );
   }

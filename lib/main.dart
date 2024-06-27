@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue, textTheme: GoogleFonts.poppinsTextTheme()),
       home: const WelcomePage(),
+      // home: const HomeScreen(),
     );
   }
 }

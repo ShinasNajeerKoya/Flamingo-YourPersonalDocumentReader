@@ -15,9 +15,9 @@ and view PDF files from your local storage with a smooth and intuitive interface
 
 ## Screenshots
 
-  <img src="https://github.com/ShinasKoya00/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/onboarding_page.jpg" width="160" /> <img src="https://github.com/ShinasKoya00/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/homepage.jpg" width="160" /> <img src="https://github.com/ShinasKoya00/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/permission.jpg" width="160" /> <img src="https://github.com/ShinasKoya00/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/pdf_selection.jpg" width="160" /> <img src="https://github.com/ShinasKoya00/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/pdf_view_1.jpg" width="160" />
+  <img src="https://github.com/ShinasNajeerKoya/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/onboarding_page.jpg" width="160" /> <img src="https://github.com/ShinasNajeerKoya/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/homepage.jpg" width="160" /> <img src="https://github.com/ShinasNajeerKoya/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/permission.jpg" width="160" /> <img src="https://github.com/ShinasNajeerKoya/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/pdf_selection.jpg" width="160" /> <img src="https://github.com/ShinasNajeerKoya/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/pdf_view_1.jpg" width="160" />
 
-  <img src="https://github.com/ShinasKoya00/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/pdf_view_2.jpg" width="160" /> <img src="https://github.com/ShinasKoya00/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/homepage_recent_1.jpg" width="160" /> <img src="https://github.com/ShinasKoya00/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/homepage_recent_2.jpg" width="160" /> <img src="https://github.com/ShinasKoya00/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/page_not_found.jpg" width="160" /> <img src="https://github.com/ShinasKoya00/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/no_internet.jpg" width="160" />
+  <img src="https://github.com/ShinasNajeerKoya/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/pdf_view_2.jpg" width="160" /> <img src="https://github.com/ShinasNajeerKoya/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/homepage_recent_1.jpg" width="160" /> <img src="https://github.com/ShinasNajeerKoya/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/homepage_recent_2.jpg" width="160" /> <img src="https://github.com/ShinasNajeerKoya/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/page_not_found.jpg" width="160" /> <img src="https://github.com/ShinasNajeerKoya/Flamingo-YourPersonalDocumentReader/blob/master/assets/application_snapshots/no_internet.jpg" width="160" />
 
 
 ## Installation
@@ -28,7 +28,7 @@ To get started with Flamingo, follow these steps:
    command:
 
 ```
-   git clone https://github.com/ShinasKoya00/Flamingo-YourPersonalDocumentReader.git
+   git clone https://github.com/ShinasNajeerKoya/Flamingo-YourPersonalDocumentReader.git
 ```
 
 2. **Navigate to the project directory:**
@@ -96,6 +96,6 @@ This project is licensed under the [MIT License](LICENSE).
 Have questions or feedback? Feel free to reach out:
 
 - Email: shinaskoya123@gmail.com
-- GitHub: https://github.com/ShinasKoya00
+- GitHub: https://github.com/ShinasNajeerKoya
 
 Thank you for using Flamingo! Enjoy exploring and elevating your screen style!

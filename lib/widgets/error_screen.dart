@@ -1,4 +1,5 @@
 import 'package:flemingo_pdfreader/constants/colors.dart';
+import 'package:flemingo_pdfreader/constants/size_configuration.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,15 +8,16 @@ import 'package:flemingo_pdfreader/constants/error_enum.dart';
 class ErrorScreen extends StatelessWidget {
   final ErrorType errorType;
 
-
   const ErrorScreen({
-    super.key, // Corrected parameter name
+    super.key,
     required this.errorType,
-
   });
 
   @override
   Widget build(BuildContext context) {
+    // Initialize SizeConfig
+    SizeConfig().init(context);
+
     String svgIconPath;
     String errorHeader;
     String errorBody;
@@ -44,34 +46,38 @@ class ErrorScreen extends StatelessWidget {
 
     return Scaffold(
       body: Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
+        height: SizeConfig.screenHeight,
+        width: SizeConfig.screenWidth,
         decoration: BoxDecoration(
-            color: Colors.white,
-            image: DecorationImage(
-              image: const AssetImage("assets/images/welcome_page.png"),
-              colorFilter: ColorFilter.mode(
-                Colors.white.withOpacity(0.1),
-                BlendMode.dstATop,
-              ),
-            )),
+          color: Colors.white,
+          image: DecorationImage(
+            image: const AssetImage("assets/images/welcome_page.png"),
+            colorFilter: ColorFilter.mode(
+              Colors.white.withOpacity(0.1),
+              BlendMode.dstATop,
+            ),
+          ),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               "Ooopss...!",
               style: GoogleFonts.poppins(
-                fontSize: 50,
+                fontSize: SizeConfig.getProportionateScreenHeight(50),
                 fontWeight: FontWeight.w700,
                 color: MyColors.darkGreen,
               ),
             ),
-            SvgPicture.asset(height: 340, svgIconPath),
+            SvgPicture.asset(
+              height: SizeConfig.getProportionateScreenHeight(340),
+              svgIconPath,
+            ),
             const SizedBox(height: 40),
             Text(
               errorHeader,
               style: GoogleFonts.poppins(
-                fontSize: 23,
+                fontSize: SizeConfig.getProportionateScreenHeight(23),
                 fontWeight: FontWeight.w700,
                 color: MyColors.darkGreen,
               ),
@@ -80,7 +86,7 @@ class ErrorScreen extends StatelessWidget {
             Text(
               "We're sorry,",
               style: GoogleFonts.poppins(
-                fontSize: 16,
+                fontSize: SizeConfig.getProportionateScreenHeight(16),
                 fontWeight: FontWeight.w500,
                 color: MyColors.darkGreen,
               ),
@@ -89,7 +95,7 @@ class ErrorScreen extends StatelessWidget {
             Text(
               errorBody,
               style: GoogleFonts.poppins(
-                fontSize: 14,
+                fontSize: SizeConfig.getProportionateScreenHeight(14),
                 fontWeight: FontWeight.w400,
                 color: MyColors.darkGreen,
               ),
@@ -106,13 +112,13 @@ class ErrorScreen extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 25,
-          vertical: 13,
+        padding: EdgeInsets.symmetric(
+          horizontal: SizeConfig.getProportionateScreenWidth(25),
+          vertical: SizeConfig.getProportionateScreenHeight(13),
         ),
         decoration: BoxDecoration(
           color: MyColors.darkGreen,
-          borderRadius: BorderRadius.circular(15),
+          borderRadius: BorderRadius.circular(SizeConfig.getProportionateScreenWidth(15)),
           boxShadow: [
             BoxShadow(
               color: Colors.grey.shade600,
@@ -122,7 +128,13 @@ class ErrorScreen extends StatelessWidget {
             ),
           ],
         ),
-        child: Text(title, style: const TextStyle(color: MyColors.backgroundColor, fontSize: 19)),
+        child: Text(
+          title,
+          style: TextStyle(
+            color: MyColors.backgroundColor,
+            fontSize: SizeConfig.getProportionateScreenHeight(19),
+          ),
+        ),
       ),
     );
   }
