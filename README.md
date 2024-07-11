@@ -54,10 +54,10 @@ To get started with Flamingo, follow these steps:
 Flamingo uses the following dependencies:
 
 - 'flutter': For building the app's UI.
-- 'cupertino_icons': For platform-specific icons on iOS.
-- 'google_fonts': For using custom fonts in the app.
+- 'cupertino icons': For platform-specific icons on iOS.
+- 'google fonts': For using custom fonts in the app.
 - 'get': A lightweight and powerful state management solution.
-- 'file_picker': Enables picking files from the device storage.
+- 'file picker': Enables picking files from the device storage.
 - 'pdfx': A plugin for rendering PDF documents.
 - 'path': Provides utilities for manipulating file system paths.
 
